@@ -77,7 +77,8 @@ const deleteTestimonial = async (req, res, next) => {
 
 const getTestimonials = async (req, res, next) => {
       try {
-            let active = req?.body?.status
+           
+            let active = req?.params?.status
             const testimonials = await testimonial.find({active: active});
             res.json({
                   status: res.statusCode,

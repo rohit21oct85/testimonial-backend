@@ -7,25 +7,22 @@ POST http://localhost:8080/api/testimonial/create/testimonial
 Content-Type: application/json
 
 {
-      "name":"Rohit Singh",
-      "post":"CEO, BobsnGlobal",
-      "description":"this is awsome service provider."
+      "name":"Isabela Moriera",
+      "post":"CEO, Graygrids",
+      "description":"Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!"
 }
 
 ### get all testimonials ###
-GET http://localhost:8080/api/testimonial/view-all/testimonials
+GET http://localhost:8080/api/testimonial/view-all/testimonials/1
 Content-Type: application/json
 
-{
-      "status": 1
-}
 
 ### update testimonials ###
 PATCH http://localhost:8080/api/testimonial/update/testimonial/61042685918775521cb5e4dc
 Content-Type: application/json
 
 {
-      "post":"QA Tester"
+      "post":"CMO, RStechnologies"
 }
 
 ### delete testimonials ###

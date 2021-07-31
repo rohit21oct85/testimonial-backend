@@ -12,7 +12,7 @@ const MONGO_OPTIONS = {
 const MONGO_USERNAME = process.env.MONGO_USERNAME || 'test-user';
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD || 'test-db-password';
 const MONGO_HOST = process.env.MONGO_HOST || 'mongo-db-host';
-const MONGO_DATABASE = process.env.MONGO_DATABASE || 'test-database-name';
+const MONGO_DATABASE = process.env.MONGO_DATABASE || 'test-database';
 
 const MONGO = {
       host: MONGO_HOST,
