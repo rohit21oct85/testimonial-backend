@@ -1,0 +1,33 @@
+### API TEST ###
+GET http://localhost:8080/api/test 
+Content-Type: application/application/json
+
+### Create Testimonial ###
+POST http://localhost:8080/api/testimonial/create/testimonial 
+Content-Type: application/json
+
+{
+      "name":"Rohit Singh",
+      "post":"CEO, BobsnGlobal",
+      "description":"this is awsome service provider."
+}
+
+### get all testimonials ###
+GET http://localhost:8080/api/testimonial/view-all/testimonials
+Content-Type: application/json
+
+{
+      "status": 1
+}
+
+### update testimonials ###
+PATCH http://localhost:8080/api/testimonial/update/testimonial/61042685918775521cb5e4dc
+Content-Type: application/json
+
+{
+      "post":"QA Tester"
+}
+
+### delete testimonials ###
+DELETE http://localhost:8080/api/testimonial/delete/testimonial/6103765ddbf61c0d10878e5a
+Content-Type: application/json
