@@ -3,13 +3,12 @@ import {useQuery} from 'react-query';
 import axios from 'axios';
 
 export default function useTestimonials(status) {
-      let API_URL;
-    if(process.env.NODE_ENV === 'production')  {
-      API_URL = 'https://testimonial-backend.herokuapp.com/api/';
-    }else{
-      API_URL = 'http://localhost:8080/api/';
-    }
-    
+      let API_URL='';
+      if(process.env.NODE_ENV === 'development'){
+          API_URL = process.env.REACT_APP_LOCAL_API_URL;
+      }else{
+          API_URL = process.env.REACT_APP_LIVE_API_URL;
+      }
     const [intervalMs] = useState(1500)
     return useQuery('testimonials', async () => {
       const result = await axios.get(`${API_URL}testimonial/view-all/testimonials/${status}`,{
