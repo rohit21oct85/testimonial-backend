@@ -34,6 +34,11 @@ mongoose.connect(config.mongo.url, config.mongo.options)
 })
 
 /** RoutesList */
+app.get('/', (req, res) => {
+      res.send({
+            message: "Welcome to Testimonial Backend"
+      })
+})
 app.get('/api/test', (req, res) => {
       res.send({
             message: "OK Testing"
