@@ -6,8 +6,9 @@ const mongoose = require('mongoose')
 
 const testimonial = require('./routes/testimonial');
 const bodyParser = require('body-parser');
-
+const path = require('path');
 const app = express();
+
 app.use(cors());
 app.use(bodyParser.json({limit: '500mb'}));
 app.use(bodyParser.urlencoded({ extended: true, limit: '500mb' }));
