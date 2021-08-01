@@ -12,7 +12,7 @@ export default function useTestimonials(status) {
     
     const [intervalMs] = useState(1500)
     return useQuery('testimonials', async () => {
-      const result = await axios.get(`${API_URL}testimonial/view-all/testimonials`,{
+      const result = await axios.get(`${API_URL}testimonial/view-all/testimonials/${status}`,{
             headers: {
                   'Content-Type': 'Application/json'
             }
