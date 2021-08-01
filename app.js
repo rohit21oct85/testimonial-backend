@@ -35,18 +35,18 @@ mongoose.connect(config.mongo.url, config.mongo.options)
 })
 
 /** RoutesList */
-if (process.env.NODE_ENV === 'production') {
-      app.use(express.static('views/build'));
-      app.get('/*', (req, res) => {
-            const index = path.join(__dirname, 'views', 'build', 'index.html');
-            res.sendFile(index);
-      });
-}
-app.get('/api/test', (req, res) => {
+
+app.get('/', (req, res) => {
       res.send({
-            message: "OK Testing"
+            message: "Server Runnings"
       })
 })
+app.get('/api/test', (req, res) => {
+      res.send({
+            message: "OK Testing !! Server Runnings"
+      })
+})
+
 app.use('/api/testimonial', testimonial)
 
 module.exports = app
