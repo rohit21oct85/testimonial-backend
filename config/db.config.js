@@ -9,10 +9,10 @@ const MONGO_OPTIONS = {
       retryWrites: false
 }
 
-const MONGO_USERNAME = process.env.MONGO_USERNAME || 'test-user';
-const MONGO_PASSWORD = process.env.MONGO_PASSWORD || 'test-db-password';
-const MONGO_HOST = process.env.MONGO_HOST || 'mongo-db-host';
-const MONGO_DATABASE = process.env.MONGO_DATABASE || 'test-database';
+const MONGO_USERNAME = process.env.MONGO_USERNAME || 'kikai-video';
+const MONGO_PASSWORD = process.env.MONGO_PASSWORD || 'Admin@2020';
+const MONGO_HOST = process.env.MONGO_HOST || 'cluster0.jmvjp.mongodb.net';
+const MONGO_DATABASE = process.env.MONGO_DATABASE || 'kikai-video';
 
 const MONGO = {
       host: MONGO_HOST,

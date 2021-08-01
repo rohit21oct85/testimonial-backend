@@ -7,8 +7,8 @@ POST http://localhost:8080/api/testimonial/create/testimonial
 Content-Type: application/json
 
 {
-      "name":"Isabela Moriera",
-      "post":"CEO, Graygrids",
+      "name":"John Smith",
+      "post":"CEO, BlackArrow",
       "description":"Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed! Stop wasting time and money designing and managing a website that doesn’t get results. Happiness guaranteed!"
 }
 
@@ -28,3 +28,7 @@ Content-Type: application/json
 ### delete testimonials ###
 DELETE http://localhost:8080/api/testimonial/delete/testimonial/6103765ddbf61c0d10878e5a
 Content-Type: application/json
+
+{
+      "status": 0
+}

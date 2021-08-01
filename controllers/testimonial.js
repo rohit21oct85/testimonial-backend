@@ -52,13 +52,14 @@ const updateTestimonial = async (req, res, next) => {
 }
 const deleteTestimonial = async (req, res, next) => {
       let id = req?.params?.testimonial_id
+      let active = req?.body?.status === 1 ? 0 : 1;
       // res.send(data); return;
       try {
             await testimonial.findByIdAndUpdate({
                   _id: id
             },{
                   $set: {
-                        active: 0
+                        active: active
                   }
             })
             res.status(res.statusCode).json({
@@ -78,7 +79,7 @@ const deleteTestimonial = async (req, res, next) => {
 const getTestimonials = async (req, res, next) => {
       try {
            
-            let active = req?.params?.status
+            let active = req?.params?.status;
             const testimonials = await testimonial.find({active: active});
             res.json({
                   status: res.statusCode,
