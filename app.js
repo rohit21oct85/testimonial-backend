@@ -34,11 +34,13 @@ mongoose.connect(config.mongo.url, config.mongo.options)
 })
 
 /** RoutesList */
-app.get('/', (req, res) => {
-      res.send({
-            message: "Welcome to Testimonial Backend"
-      })
-})
+if (process.env.NODE_ENV === 'production') {
+      app.use(express.static('views/build'));
+      app.get('/*', (req, res) => {
+            const index = path.join(__dirname, 'views', 'build', 'index.html');
+            res.sendFile(index);
+      });
+}
 app.get('/api/test', (req, res) => {
       res.send({
             message: "OK Testing"

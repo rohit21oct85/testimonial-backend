@@ -80,7 +80,7 @@ const getTestimonials = async (req, res, next) => {
       try {
            
             let active = req?.params?.status;
-            const testimonials = await testimonial.find({active: active});
+            const testimonials = await testimonial.find({});
             res.json({
                   status: res.statusCode,
                   data: testimonials
